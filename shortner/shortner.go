@@ -28,6 +28,9 @@ func createHandler(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(h, dest.String())
 	hash := fmt.Sprintf("%x", h.Sum(nil))
 
+	// XXX switch from using the hash to using the shortest available prefix
+	// instead
+
 	fmt.Printf("%s --> %s\n", hash, dest.String())
 	knownPairs[hash] = &ShortenedPair{dest, hash}
 	w.WriteHeader(http.StatusOK)
