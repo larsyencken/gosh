@@ -76,4 +76,7 @@ $(GOPATH)/bin/gogpm:
 test:
 	go test ./...
 
+serve: build
+	./bin/gogettrimmed agent
+
 .PHONY: build dist clean test help default link

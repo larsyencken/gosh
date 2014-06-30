@@ -1,3 +1,3 @@
 github.com/juju/loggo       7e8c70b24b80b95b2284f09306aac0bd93588db8
 github.com/mitchellh/cli    69f0b65ce53b27f729b1b807b88dc88007f41dd3
-github.com/gorilla/mux      HEAD
+github.com/gorilla/pat      HEAD
