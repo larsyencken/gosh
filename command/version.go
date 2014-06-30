@@ -20,7 +20,7 @@ func (c *VersionCommand) Help() string {
 
 func (c *VersionCommand) Run(_ []string) int {
 	var versionString bytes.Buffer
-	fmt.Fprintf(&versionString, "gogettrimmed v%s", c.Version)
+	fmt.Fprintf(&versionString, "gosh v%s", c.Version)
 	if c.VersionPrerelease != "" {
 		fmt.Fprintf(&versionString, ".%s", c.VersionPrerelease)
 
@@ -34,5 +34,5 @@ func (c *VersionCommand) Run(_ []string) int {
 }
 
 func (c *VersionCommand) Synopsis() string {
-	return "Prints the gogettrimmed version"
+	return "Prints the gosh version"
 }

@@ -1,6 +1,6 @@
-# gogettrimmed
+# gosh
 
-A simple Go URL shortener.
+A URL shortener in Go, made as an experiment in learning Go. Currently operates in-memory only.
 
 ## Getting started
 
@@ -10,7 +10,7 @@ Running it then should be as simple as:
 
 ```console
 $ make
-$ ./bin/gogettrimmed
+$ ./bin/gosh
 ```
 
 Add your long-running agent logic to `command/agent/command.go`, and any status or action commands you need to `commands.go`.
@@ -21,7 +21,7 @@ Add your long-running agent logic to `command/agent/command.go`, and any status 
 
 ## License
 
-_Fill me in._
+BSD licenced.
 
 ## Contributing
 

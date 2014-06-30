@@ -6,8 +6,8 @@ import (
 
 	"github.com/juju/loggo"
 
-	"github.com/larsyencken/gogettrimmed/command"
-	"github.com/larsyencken/gogettrimmed/command/agent"
+	"github.com/larsyencken/gosh/command"
+	"github.com/larsyencken/gosh/command/agent"
 	"github.com/mitchellh/cli"
 )
 

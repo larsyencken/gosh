@@ -8,13 +8,13 @@
 VERSION := $(shell grep "const Version " version.go | sed -E 's/.*"(.+)"$$/\1/')
 
 # Binary name for bintray
-BIN_NAME=gogettrimmed
+BIN_NAME=gosh
 
 # Project owner for bintray
 OWNER=larsyencken
 
 # Project name for bintray
-PROJECT_NAME=gogettrimmed
+PROJECT_NAME=gosh
 
 # Project url used for builds
 # examples: github.com, bitbucket.org
@@ -30,12 +30,12 @@ GIT_DIRTY=$(shell test -n "`git status --porcelain`" && echo "+CHANGES" || true)
 # use the global GOPATH instead
 GOPATH=$(PWD)/.vendor
 
-INSTALL_PATH=$(GOPATH)/src/github.com/larsyencken/gogettrimmed
+INSTALL_PATH=$(GOPATH)/src/github.com/larsyencken/gosh
 
 default: build
 
 help:
-	@echo 'Management commands for gogettrimmed:'
+	@echo 'Management commands for gosh:'
 	@echo
 	@echo 'Usage:'
 	@echo '    make build    Compile the project.'
@@ -77,6 +77,6 @@ test:
 	go test ./...
 
 serve: build
-	./bin/gogettrimmed agent
+	./bin/gosh agent
 
 .PHONY: build dist clean test help default link

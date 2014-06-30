@@ -28,8 +28,8 @@ is open to whoever wants to implement it.
 
 ### Write Documentation
 
-gogettrimmed could always use more documentation, whether as part of the
-official gogettrimmed docs, in docstrings, or even on the web in blog posts,
+gosh could always use more documentation, whether as part of the
+official gosh docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 ### Submit Feedback

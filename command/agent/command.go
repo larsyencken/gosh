@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/juju/loggo"
-	"github.com/larsyencken/gogettrimmed/shortner"
+	"github.com/larsyencken/gosh/shortner"
 	"github.com/mitchellh/cli"
 )
 
@@ -41,14 +41,14 @@ func (c *Command) Run(args []string) int {
 }
 
 func (c *Command) Synopsis() string {
-	return "Runs a gogettrimmed agent"
+	return "Runs a gosh agent"
 }
 
 func (c *Command) Help() string {
 	helpText := `
-Usage: gogettrimmed agent [options]
+Usage: gosh agent [options]
 
-  Starts the gogettrimmed agent and runs until an interrupt is received.
+  Starts the gosh agent and runs until an interrupt is received.
 
 Options:
 

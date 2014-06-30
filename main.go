@@ -32,7 +32,7 @@ func realMain() int {
 	cli := &cli.CLI{
 		Args:     args,
 		Commands: Commands,
-		HelpFunc: cli.BasicHelpFunc("gogettrimmed"),
+		HelpFunc: cli.BasicHelpFunc("gosh"),
 	}
 
 	exitCode, err := cli.Run()
