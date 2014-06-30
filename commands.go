@@ -6,9 +6,9 @@ import (
 
 	"github.com/juju/loggo"
 
-	"github.com/mitchellh/cli"
 	"github.com/larsyencken/gogettrimmed/command"
 	"github.com/larsyencken/gogettrimmed/command/agent"
+	"github.com/mitchellh/cli"
 )
 
 // Commands is the mapping of all the available Serf commands.

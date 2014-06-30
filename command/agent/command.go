@@ -5,6 +5,7 @@ import (
 	"strings"
 
 	"github.com/juju/loggo"
+	"github.com/larsyencken/gogettrimmed/shortner"
 	"github.com/mitchellh/cli"
 )
 
@@ -34,6 +35,7 @@ func (c *Command) Run(args []string) int {
 	c.Log = loggo.GetLogger("agent")
 
 	// main logic here
+	shortner.Main()
 
 	return 0
 }

@@ -44,10 +44,12 @@ help:
 	@echo '    make clean    Clean the directory tree.'
 	@echo
 
-build: .git $(GOPATH)/bin/gogpm $(INSTALL_PATH)
+dep: $(GOPATH)/bin/gogpm
+	$(GOPATH)/bin/gogpm install
+
+build: .git $(INSTALL_PATH)
 	@echo "building ${OWNER} ${BIN_NAME} ${VERSION}"
 	@echo "GOPATH=${GOPATH}"
-	$(GOPATH)/bin/gogpm install && \
 	go build -ldflags "-X main.GitCommit ${GIT_COMMIT}${GIT_DIRTY}" -o bin/${BIN_NAME}
 
 clean:
