@@ -82,4 +82,7 @@ test:
 serve: build
 	./bin/gosh agent
 
+fmt:
+	find . -name '*.go' -exec gofmt -w=true {} ';'
+
 .PHONY: build dist clean test help default link

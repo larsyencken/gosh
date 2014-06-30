@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/mitchellh/cli"
 	"io/ioutil"
 	"log"
 	"os"
+
+	"github.com/mitchellh/cli"
 )
 
 func main() {
 	os.Exit(realMain())
 }
-
 
 func realMain() int {
 	log.SetOutput(ioutil.Discard)
