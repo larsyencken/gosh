@@ -47,7 +47,7 @@ help:
 dep: $(GOPATH)/bin/gogpm
 	$(GOPATH)/bin/gogpm install
 
-build: .git $(INSTALL_PATH)
+build: .git $(GOPATH) $(INSTALL_PATH)
 	@echo "building ${OWNER} ${BIN_NAME} ${VERSION}"
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X main.GitCommit ${GIT_COMMIT}${GIT_DIRTY}" -o bin/${BIN_NAME}
@@ -69,6 +69,9 @@ link:
 
 $(INSTALL_PATH):
 	make link
+
+$(GOPATH):
+	make dep
 
 $(GOPATH)/bin/gogpm:
 	go get github.com/mtibben/gogpm
