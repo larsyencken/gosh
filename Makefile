@@ -83,6 +83,13 @@ serve: build
 	./bin/gosh agent
 
 fmt:
-	find . -name '*.go' -exec gofmt -w=true {} ';'
+	find . -name '*.go' -and -not -path './.vendor/*' -exec gofmt -w=true {} ';'
+
+$(GOPATH)/bin/golint:
+	go get github.com/golang/lint/golint
+
+lint: $(GOPATH)/bin/golint
+	@echo "GOPATH=${GOPATH}"
+	find . -name '*.go' -and -not -path './.vendor/*' | xargs $(GOPATH)/bin/golint
 
 .PHONY: build dist clean test help default link
